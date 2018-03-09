@@ -1,0 +1,57 @@
+<div ng-show="browse">
+  <table>
+    <tr>
+      <td>
+        <a href="#">
+          <img src="res/img/previous.png"  ng-click="previous()"/>
+        </a>
+      </td>
+      <td class="data">{{diames.dia}}</td>
+      <td class="data">&sol;</td>
+      <td class="data">{{diames.mes}}</td>
+      <td>
+        <a href="#" ng-click="next()">
+          <img src="res/img/next.png" />
+        </a>
+      </td>
+      <td>
+        <a href="#" ng-click="edit()">
+          <img src="res/img/edit.png" />
+        </a>
+      </td>
+      <td>
+        <social-drop-down />
+      </td>
+    </tr>
+  </table>
+  </div>
+  <div ng-show="editar">
+    <table>
+      <tr>
+        <td></td>
+        <td>
+          <select ng-model="diames.dia" class="data combo">
+            <option ng-repeat="n in [] | range:31" value="{{n}}">{{n}}</option>
+          </select>
+        </td>
+        <td class="data">&sol;</td>
+        <td>
+          <select ng-model="diames.mes" class="data combo">
+            <option ng-repeat="n in [] | range:12" value="{{n}}">{{n}}</option>
+          </select>
+        </td>
+        <td></td>
+        <td>
+          <a href="#" ng-click="save()">
+            <img src="res/img/save.png" />
+          </a>
+        </td>
+        <td>
+          <a href="#" ng-click="cancel()">
+            <img src="res/img/cancel.png" />
+          </a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
