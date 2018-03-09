@@ -2,14 +2,18 @@
 <!doctype html>
 <html ng-app="HojeEhDiaDeRuaApp">
   <head>
-      <title>Dia Mes Component</title>
+      <title>Hoje é Dia de Rua</title>
       <meta charset="utf-8" />
       <link rel="stylesheet" href="res/style/diaderua.css" />
   </head>
-  <body ng-controller="mainController">
+  <body ng-controller="mainController" ng-init="init()">
     <div>
       <h1>{{title}}</h1>
-      <diames />
+      <h2><a href="estatisticas.html">Estatísticas</a></h2>
+      <div id="corpo">
+        <calendario dia="dia" mes="mes" />
+        <localidades cidades="{{localidades}}" />
+      </div>
     </div>
       <!-- vendors:js -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -20,8 +24,9 @@
     <script src="res/script/main.js"></script>
     <script src="res/script/filters.js"></script>
     <script src="res/script/directives.js"></script>
-    <script src="res/script/diames.js"></script>
-    <script src="res/script/socialDropDown.js"></script>
+    <script src="res/script/calendario.js"></script>
+    <script src="res/script/localidades.js"></script>
+    <script src="res/script/localidade.js"></script>
     <!-- endinject -->
   </body>
 </html>

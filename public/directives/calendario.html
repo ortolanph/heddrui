@@ -1,0 +1,34 @@
+<div id="calendario">
+  <div ng-show="browse">
+      <p>
+        <a href="#" ng-click="previous()"><img src="res/img/previous.png" width="32px"/></a>
+        <a href="https://pt.wikipedia.org/wiki/{{dia}}_de_{{mes}}" target="_blank">{{dia}}</a>
+        <a href="#" ng-click="next()"><img src="res/img/next.png" width="32px"/></a>
+      </p>
+      <p>{{mes}}</p>
+      <p>
+        <a href="#" ng-click="edit()"><img src="res/img/edit.png"/></a>
+        <a href="#" ng-click="share('facebook')"><img src="res/img/facebook.png" /></a>
+        <a href="#" ng-click="share('twitter')"><img src="res/img/twitter.png" /></a>
+        <a href="#" ng-click="share('googleplus')"><img src="res/img/googleplus.png"></a>
+      </p>
+  </div>
+
+  <div ng-show="editar">
+      <p>
+        <select ng-model="dia" class="data combo">
+          <option ng-repeat="n in [] | range:31" value="{{n}}">{{n}}</option>
+        </select>
+      </p>
+      <p>
+        <select ng-model="mes" class="data combo">
+          <option ng-repeat="mes in meses" value="{{mes}}">{{mes}}</option>
+        </select>
+      </p>
+      <p>
+        <a href="#" ng-click="save()"><img src="res/img/save.png" /></a>
+        <a href="#" ng-click="cancel()"><img src="res/img/today.png" /></a>
+      </p>
+  </div>
+</div>
+<p/>
