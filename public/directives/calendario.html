@@ -1,4 +1,4 @@
-<div id="calendario">
+<div id="calendario" ng-init="init()">
   <div ng-show="browse">
       <p>
         <a href="#" ng-click="previous()"><img src="res/img/previous.png" width="32px"/></a>
@@ -27,8 +27,8 @@
       </p>
       <p>
         <a href="#" ng-click="save()"><img src="res/img/save.png" /></a>
-        <a href="#" ng-click="cancel()"><img src="res/img/today.png" /></a>
+        <a href="#" ng-click="today()"><img src="res/img/today.png" /></a>
       </p>
   </div>
 </div>
-<p/>
+<p></p>

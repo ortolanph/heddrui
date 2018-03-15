@@ -12,14 +12,25 @@ function calendarioController($scope) {
     "Setembro", "Outubro", "Novembro", "Dezembro"
   ];
 
+  $scope.monthIndex = 0;
+
+  $scope.init = () => {
+    for(var i = 0; i < $scope.meses.length; i++) {
+      if($scope.meses[i] == $scope.mes) {
+        $scope.monthIndex = i;
+      }
+    }
+  }
+
   $scope.next = () => {
     $scope.dia ++;
     if($scope.dia > 31) {
       $scope.dia = 1;
-      $scope.mes++;
-      if($scope.mes > 12) {
-        $scope.mes = 1;
+      $scope.monthIndex++;
+      if($scope.monthIndex > 11) {
+        $scope.monthIndex = 1;
       }
+      $scope.mes = $scope.meses[$scope.monthIndex];
     }
   };
 
@@ -27,10 +38,11 @@ function calendarioController($scope) {
     $scope.dia--;
     if($scope.dia == 0) {
       $scope.dia = 31;
-      $scope.mes--;
-      if($scope.mes == 0) {
-        $scope.mes = 12;
+      $scope.monthIndex--;
+      if($scope.monthIndex == 0) {
+        $scope.monthIndex = 12;
       }
+      $scope.mes = $scope.meses[$scope.monthIndex];
     }
   };
 
@@ -42,7 +54,7 @@ function calendarioController($scope) {
     toggle();
   }
 
-  $scope.hoje = () => {
+  $scope.today = () => {
     $scope.dia = 9;
     $scope.mes = "Março";
     toggle();
@@ -54,6 +66,6 @@ function calendarioController($scope) {
   }
 
   $scope.share = shareon => {
-    
+
   }
 }

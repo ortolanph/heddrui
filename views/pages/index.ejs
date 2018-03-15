@@ -11,9 +11,10 @@
       <h1>{{title}}</h1>
       <h2><a href="estatisticas.html">Estatísticas</a></h2>
       <div id="corpo">
-        <calendario dia="dia" mes="mes" />
-        <localidades cidades="{{localidades}}" />
+        <calendario dia="dia" mes="mes"></calendario>
+        <localidades cidades="cidades"></localidades>
       </div>
+      <rodape></rodape>
     </div>
       <!-- vendors:js -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
@@ -25,8 +26,6 @@
     <script src="res/script/filters.js"></script>
     <script src="res/script/directives.js"></script>
     <script src="res/script/calendario.js"></script>
-    <script src="res/script/localidades.js"></script>
-    <script src="res/script/localidade.js"></script>
     <!-- endinject -->
   </body>
 </html>

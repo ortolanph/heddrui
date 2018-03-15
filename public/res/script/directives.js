@@ -6,33 +6,40 @@ function calendario() {
     scope: {
       dia : '=',
       mes : '='
-    }
+    },
   };
 }
 
 function localidades() {
   return {
     restrict: 'E',
-    controller: localidadesController,
     templateUrl: 'directives/localidades.html',
     scope: {
-      cidades: '@'
-    }
-  }
+      cidades: '=',
+    },
+  };
 }
 
 function localidade() {
   return {
     restrict: 'E',
-    controller: localidadeController,
     templateUrl: 'directives/localidade.html',
     scope: {
-      cidade: '@'
-    }
+      cidade: '=',
+    },
+  };
+}
+
+function rodape() {
+  return {
+    restrict: 'E',
+    templateUrl: 'directives/rodape.html'
   }
 }
+
 
 angular.module('HojeEhDiaDeRua.directives')
   .directive('calendario', calendario)
   .directive('localidades', localidades)
-  .directive('localidade', localidade);
+  .directive('localidade', localidade)
+  .directive('rodape', rodape);

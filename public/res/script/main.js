@@ -7,15 +7,15 @@ function mainController($scope) {
   $scope.dia = 0;
   $scope.mes = "";
 
-  $scope.localidades = [];
+  $scope.cidades = [];
 
   $scope.init = () => {
     $scope.dia = 9;
     $scope.mes = "Março";
-    
-    $scope.localidades.push({ nome: "Campinas", uf: "SP", latitude: 0.0, longitude: 0.0 });
-    $scope.localidades.push({ nome: "São Paulo", uf: "SP", latitude: 0.0, longitude: 0.0 });
-    $scope.localidades.push({ nome: "Barueri", uf: "SP", latitude: 0.0, longitude: 0.0 });
-    $scope.localidades.push({ nome: "Araras", uf: "SP", latitude: 0.0, longitude: 0.0 });
+
+    $scope.cidades.push({ nome: "Campinas", uf: "SP", latitude: 0.0, longitude: 0.0 });
+    $scope.cidades.push({ nome: "São Paulo", uf: "SP", latitude: 0.0, longitude: 0.0 });
+    $scope.cidades.push({ nome: "Barueri", uf: "SP", latitude: 0.0, longitude: 0.0 });
+    $scope.cidades.push({ nome: "Araras", uf: "SP", latitude: 0.0, longitude: 0.0 });
   }
 }

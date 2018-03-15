@@ -1,5 +1,5 @@
 <div ng-show="cidades.length">
     <h2>Existe(m) {{localidades.length}} rua(s) com essa data em:</h2>
-    <ng-repeat="cidade in cidades" localidade cidade="{{cidade}}"/>
+    <localidade ng-repeat="cidade in cidades" cidade="cidade"></localidade>
 </div>
 <p ng-hide="cidades.length">Infelizmente nenhuma cidade decidiu batizar uma rua com essa data...</p>
